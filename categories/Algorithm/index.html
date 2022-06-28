@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>分类: Algorithm - Charon Blog</title><link rel="manifest" href="/blog/manifest.json"><meta name="application-name" content="Charon Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Charon Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Charon Blog"><meta property="og:url" content="https://lkrcharon.github.io/blog"><meta property="og:site_name" content="Charon Blog"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://lkrcharon.github.io/blog/img/og_image.png"><meta property="article:author" content="Lee Charon"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/blog/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://lkrcharon.github.io/blog"},"headline":"Charon Blog","image":["https://lkrcharon.github.io/blog/img/og_image.png"],"author":{"@type":"Person","name":"Lee Charon"},"publisher":{"@type":"Organization","name":"Charon Blog","logo":{"@type":"ImageObject","url":"https://lkrcharon.github.io/img/logo.svg"}},"description":""}</script><link rel="icon" href="/blog/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/blog/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/blog/"><img src="/blog/img/logo.svg" alt="Charon Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/blog/">Home</a><a class="navbar-item" href="/blog/archives">Archives</a><a class="navbar-item" href="/blog/categories">Categories</a><a class="navbar-item" href="/blog/tags">Tags</a><a class="navbar-item" href="/blog/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/blog/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">Algorithm</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-06-26T12:37:56.000Z" title="2022/6/26下午8:37:56">2022-06-26</time>发表</span><span class="level-item"><time dateTime="2022-06-28T06:59:44.048Z" title="2022/6/28下午2:59:44">2022-06-28</time>更新</span><span class="level-item"><a class="link-muted" href="/blog/categories/Algorithm/">Algorithm</a></span><span class="level-item">4 分钟读完 (大约581个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/blog/Algorithm/backtoCpp/">backtoCpp</a></h1><div class="content"><h2 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h2><h3 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h3><p>vector容器在做形参传递时，有三种方式：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">init_vector1</span><span class="params">(vector&lt;<span class="type">int</span>&gt;vectest)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init_vector2</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp;vectest)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init_vector3</span><span class="params">(vector&lt;<span class="type">int</span>&gt;*vectest)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>第一种为值传递，实参复制<br>第二三分别为引用传递和指针传递，会对实参做出影响。<br>实际应用时建议采用引用传递。</p>
+<p>++i的效率比i++高，因为i++先赋值后运算，多生成一个局部对象。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CDemo CDemo::<span class="keyword">operator</span>++ ()</span><br><span class="line">&#123;  <span class="comment">//前置++</span></span><br><span class="line">    ++n;</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line">CDemo CDemo::<span class="keyword">operator</span> ++(<span class="type">int</span> k)</span><br><span class="line">&#123;  <span class="comment">//后置++</span></span><br><span class="line">    <span class="function">CDemo <span class="title">tmp</span><span class="params">(*<span class="keyword">this</span>)</span></span>;  <span class="comment">//记录修改前的对象</span></span><br><span class="line">    n++;</span><br><span class="line">    <span class="keyword">return</span> tmp;  <span class="comment">//返回修改前的对象</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h3><p>哈希表是一个采用键值和值相互对应的函数，在c++中，与哈希表对应的容器是unordered_map（无序容器）。因此采用unordered_map建立哈希表。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> it = hashtable.<span class="built_in">find</span>(target - nums[i]);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>find(key)是unordered_map容器中寻找键key对应的值的成员方法。若键key与其值的键值对在容器中存在，则返回一个指向该键值对的正向迭代器，反之则返回一个指向容器中最后一个键值对之后位置的迭代器。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(it != hashtable.<span class="built_in">end</span>())</span><br></pre></td></tr></table></figure>
+<p>成员方法end()生成指向容器中最后一个键值对之后位置的迭代器。</p>
+<h3 id="迭代器iterator"><a href="#迭代器iterator" class="headerlink" title="迭代器iterator"></a>迭代器iterator</h3><p>迭代器根据访问方式分为正向迭代器、双向迭代器、随机访问迭代器。不同的访问方式使得迭代器可以做的运算不同。</p>
+<p>迭代器常用功能：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1、定义一个正向迭代器</span></span><br><span class="line"><span class="comment">//容器类名::iterator 迭代器名;</span></span><br><span class="line">vector&lt;<span class="type">int</span>&gt;::iterator i; </span><br><span class="line"></span><br><span class="line"><span class="comment">//2、取得迭代器所指元素</span></span><br><span class="line">a = *i;</span><br><span class="line"><span class="comment">//3、移动迭代器，访问下一个元素（移动方法视迭代器类别变化）</span></span><br><span class="line">++i;</span><br><span class="line"></span><br><span class="line"><span class="comment">//在unordered_map容器中，迭代器指向键值对，即指向两个元素，键和值。</span></span><br><span class="line"><span class="comment">//因此通过迭代器访问unordered_map容器时，需要说明访问的是哪个元素。其中first是键，second是值。</span></span><br><span class="line"><span class="keyword">return</span> &#123;it-&gt;second,i&#125;;</span><br><span class="line"><span class="comment">//上句即为访问键值对中的值。</span></span><br></pre></td></tr></table></figure>
+
+
+<p>在 C++11 标准下，相比 NULL 和 0，使用 nullptr 初始化空指针可以令我们编写的程序更加健壮。</p>
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://www.gravatar.com/avatar/315a2daa7656a98a6362922c20796842?s=128" alt="Lee Charon"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Lee Charon</p><p class="is-size-6 is-block">Lord of Cinder</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Lothric</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/blog/archives"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/blog/categories"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/blog/tags"><p class="title">4</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/LKRCharon" target="_blank" rel="noopener">关注我</a></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/blog/categories/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/blog/categories/Blog/"><span class="level-start"><span class="level-item">Blog</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/blog/categories/OS/"><span class="level-start"><span class="level-item">OS</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/blog/categories/frontend/"><span class="level-start"><span class="level-item">frontend</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/blog/categories/frontend/vue/"><span class="level-start"><span class="level-item">vue</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-28T07:44:40.000Z">2022-06-28</time></p><p class="title"><a href="/blog/uncategorized/frontendResources/">frontendResources</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-27T16:43:36.000Z">2022-06-28</time></p><p class="title"><a href="/blog/OS/osPKElabChallenge/">osPKElabChallenge</a></p><p class="categories"><a href="/blog/categories/OS/">OS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-26T12:37:56.000Z">2022-06-26</time></p><p class="title"><a href="/blog/Algorithm/backtoCpp/">backtoCpp</a></p><p class="categories"><a href="/blog/categories/Algorithm/">Algorithm</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-25T06:53:17.000Z">2022-06-25</time></p><p class="title"><a href="/blog/OS/osLabPKE/">osLabPKE</a></p><p class="categories"><a href="/blog/categories/OS/">OS</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-25T02:57:45.000Z">2022-06-25</time></p><p class="title"><a href="/blog/frontend/vue/yxhyRecord/">2022实训记录</a></p><p class="categories"><a href="/blog/categories/frontend/">frontend</a> / <a href="/blog/categories/frontend/vue/">vue</a></p></div></article></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/blog/tags/Lab/"><span class="tag">Lab</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/blog/tags/cpp/"><span class="tag">cpp</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/blog/tags/leetcode/"><span class="tag">leetcode</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/blog/tags/record/"><span class="tag">record</span><span class="tag">2</span></a></div></div></div></div></div></div><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3"><!--!--></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/blog/"><img src="/blog/img/logo.svg" alt="Charon Blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 Lee Charon</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/blog/js/column.js"></script><script src="/blog/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/blog/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/blog/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/blog/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/blog/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

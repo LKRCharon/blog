@@ -10282,6 +10282,44 @@ body > .section {
     background: rgba(0,0,0,0.24);
   }
 }
+@media screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: rgba(0,0,0,0.06);
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: rgba(0,0,0,0.12);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.24);
+  }
+}
+@media screen and (min-width: 769px), print {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: rgba(0,0,0,0.06);
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: rgba(0,0,0,0.12);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.24);
+  }
+}
 .ml-0,
 .mx-0 {
   margin-left: 0 !important;
@@ -10762,6 +10800,9 @@ body > .section {
 .card {
   overflow: visible;
   border-radius: 0;
+}
+.card:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.1);
 }
 .card + .card,
 .card + .column-right-shadow {
@@ -11353,6 +11394,9 @@ figure.highlight.foldable div.level-left {
 .widget .menu-list li ul {
   margin-right: 0;
 }
+.widget .menu-list a {
+  transition: background-color 0.3s ease-in-out;
+}
 .widget .menu-list .level {
   margin-bottom: 0;
 }
@@ -11370,11 +11414,11 @@ figure.highlight.foldable div.level-left {
   color: $white-invert;
 }
 .widget .tags .tag:first-child {
-  background: #fcee09;
-  color: #121617;
+  background: $light-grey;
+  color: #4a4a4a;
 }
 .widget .tags .tag:last-child {
-  background: $light-grey;
+  background: #e7e7e7;
   color: $white-invert;
 }
 .level.is-multiline {
@@ -11398,6 +11442,9 @@ figure.highlight.foldable div.level-left {
     max-height: calc(100vh - 2rem);
     overflow-y: auto;
   }
+  #toc,
+  max-height: calc(100vh - 22px),
+  overflow-y: scroll,
   #toc-mask {
     display: none;
     position: fixed;
@@ -11639,6 +11686,10 @@ figure.highlight.foldable div.level-left {
   background-color: #f5e703;
 }
 @media screen and (min-width: 1280px) {
+  .is-3-column .container {
+    max-width: 1216px;
+    width: 1216px;
+  }
   .is-1-column .container,
   .is-2-column .container {
     max-width: 960px;
@@ -11646,6 +11697,10 @@ figure.highlight.foldable div.level-left {
   }
 }
 @media screen and (min-width: 1472px) {
+  .is-3-column .container {
+    max-width: 1344px;
+    width: 1344px;
+  }
   .is-2-column .container {
     max-width: 1152px;
     width: 1152px;
